@@ -1,20 +1,35 @@
-abstract class vechicle{
-abstract void cost();
-void start(){
-System.out.println("start with a key");
+interface vechicle{
+void tyre();
+void speed();
+void start();
+void imp();
 }
+abstract class bus implements vechicle{
+public abstract void tyre();
+public abstract void speed();
+public void start(){System.out.println("this is abstracti ");}
 }
-class bike extends vechicle{
-void cost(){
-System.out.println("BWM cost is 40 lakhs");
+class car extends bus{
+public void tyre(){System.out.println("hello");}
+public void speed(){System.out.println("hi");}
+public void imp(){System.out.println("hehehe");}
 }
+class cycle implements vechicle{
+public void tyre(){System.out.println("ello");}
+public void speed(){System.out.println("hmmm");}
+public void start(){System.out.println("eee");}
+public void imp(){System.out.println("hehhhhh");}
 }
-class abstraction{
+class lorry{
 public static void main(String []args){
-vechicle x=new bike();
-x.cost();
+vechicle x=new car();
+x.tyre();
+x.speed();
 x.start();
-x=new bike();
-x.cost();
+x.imp();
+x=new cycle();
+x.tyre();
+x.speed();
+x.start();
 }
 }
