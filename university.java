@@ -1,25 +1,18 @@
 class university{
-void listofcolleges(){
-System.out.println("1.MRECW  2.CBIT 3.TKR 4.INR");
+    static class department{
+   void announcement(){
+    System.out.println("exam date has to be announced");
+    }
+    static void result(){
+    System.out.println("result kept in website");
+    }
+    }
 }
-void selectcollege(String college){
-System.out.println("selected college is="+college);
-}
-String seatalloted(){
-return "yes";
-}
-String branchname(String name){
-System.out.println("branch name ="+name);
-return "congrats";
-}
-}
-class student{
-public static void main(String []args)
-{
-university JNTUH=new university();
-JNTUH.listofcolleges();
-JNTUH.selectcollege("3.TKR");
-System.out.println("is seat alloted ="+JNTUH.seatalloted());
-System.out.println(JNTUH.branchname("ECE"));
-}
+class nested{
+  public static void main(String []args)
+    {
+       university.department  uni=new university.department(); 
+       uni.announcement();
+       university.department.result();
+   }
 }
