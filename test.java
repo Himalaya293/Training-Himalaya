@@ -1,17 +1,28 @@
-package tester;
-import automobile.*;
-import two.*;
-import twowh.*;
+package blocks;
 
-public class test
-{
-  public static void main(String []args)
+class a {
+	static {
+		System.out.print("This is static block");
+	}
+    a()
     {
-        /*honda v1=new hero();
-         v1.getspeed();
-         v1.radio();*/
-         vehicle v2=new hero();
-         v2.getspeed();
-         v2.cdplayer();
-     }
+       System.out.print("This is static block in constructor");
+    }}
+    class b{
+    	static {
+    		System.out.print("This is static block");
+    	}
+        b()
+        {
+           System.out.print("This is static block in constructor");
+        }
+    }
+public class test {
+
+	public static void main(String[] args) throws Exception {
+		System.out.println("Static method");
+	    //Class c=Class.forName(args[0]);
+	    //System.out.println(c.getName());
+	}
+
 }
