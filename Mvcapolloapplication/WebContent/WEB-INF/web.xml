@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+  <servlet>
+  <servlet-name>first</servlet-name>
+  <servlet-class>com.mvcapollo.Dregistrationcontroller</servlet-class>
+  </servlet>
+
+ <servlet-mapping>
+ <servlet-name>first</servlet-name>
+ <url-pattern>/doctor_registration</url-pattern>
+ </servlet-mapping>
+ 
+ <servlet>
+ <servlet-name>second</servlet-name>
+ <servlet-class>com.mvcapollo.Dlogincontroller</servlet-class>
+ </servlet>
+  
+ <servlet-mapping>
+ <servlet-name>second</servlet-name>
+ <url-pattern>/doctor_login</url-pattern>
+ </servlet-mapping>
+ 
+ 
+ <servlet>
+ <servlet-name>third</servlet-name>
+ <servlet-class>com.mvcapollo.Pregistrationcontroller</servlet-class>
+ </servlet>
+ 
+ <servlet-mapping>
+ <servlet-name>third</servlet-name>
+ <url-pattern>/patient_registration</url-pattern>
+ </servlet-mapping>
+ 
+ <servlet>
+ <servlet-name>fourth</servlet-name>
+ <servlet-class>com.mvcapollo.Plogincontroller</servlet-class>
+ </servlet>
+ 
+ <servlet-mapping>
+ <servlet-name>fourth</servlet-name>
+ <url-pattern>/patient_login</url-pattern>
+ </servlet-mapping>
+ 
+ <servlet>
+ <servlet-name>fifth</servlet-name>
+ <servlet-class>com.mvcapollo.Doctor_profile_updatecontroller</servlet-class>
+ </servlet>
+ 
+ <servlet-mapping>
+ <servlet-name>fifth</servlet-name>
+ <url-pattern>/doctor_profile_update</url-pattern>
+ </servlet-mapping>
+ 
+ <servlet>
+ <servlet-name>sixth</servlet-name>
+ <servlet-class>com.mvcapollo.Patient_profile_updatecontroller</servlet-class>
+ </servlet>
+ 
+ <servlet-mapping>
+ <servlet-name>sixth</servlet-name>
+ <url-pattern>/patient_profile_update.jsp</url-pattern>
+ </servlet-mapping>
+ 
+ <servlet>
+ <servlet-name>seventh</servlet-name>
+ <servlet-class>com.mvcapollo.Apply_appointmentcontroller</servlet-class>
+ </servlet>
+ 
+ <servlet-mapping>
+ <servlet-name>seventh</servlet-name>
+ <url-pattern>/apply_appointment</url-pattern>
+ </servlet-mapping>
+ 
+ <servlet>
+ <servlet-name>eight</servlet-name>
+ <servlet-class>com.mvcapollo.Accept_appointmentcontroller</servlet-class>
+ </servlet>
+ 
+ <servlet-mapping>
+ <servlet-name>eight</servlet-name>
+ <url-pattern>/accept_appointment</url-pattern>
+ </servlet-mapping>
+ 
+ 
+ 
+</web-app>
