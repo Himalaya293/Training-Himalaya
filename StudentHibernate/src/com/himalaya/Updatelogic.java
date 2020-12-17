@@ -12,6 +12,7 @@ public class Updatelogic {
 		cf.configure("configuration.xml");
 		SessionFactory sf=cf.buildSessionFactory();
         Session se=sf.openSession();
+        
         Transaction tx=se.beginTransaction();
         Student hima=se.load(Student.class, 122);
         hima.setName("jaabi");
