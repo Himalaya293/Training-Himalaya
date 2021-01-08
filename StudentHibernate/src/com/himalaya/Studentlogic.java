@@ -13,6 +13,7 @@ public class Studentlogic {
 		cf.configure("configuration.xml");
 		SessionFactory sf=cf.buildSessionFactory();
         Session se=sf.openSession();
+        
         Student hima=new Student();
         hima.setId(123);
         hima.setName("keerthi");

@@ -20,7 +20,7 @@
 Eregistrationbean eb=(Eregistrationbean)session.getAttribute("bean");
 if(eb!=null){
 %>
-</tr>
+<tr>
 <td><%=eb.getId() %></td>
 <td><%=eb.getName() %></td>
 <td><%=eb.getPassword() %></td>
@@ -31,7 +31,7 @@ if(eb!=null){
 <td><a href="update_emp_profile.jsp?id=<%=eb.getId()%>">Update</a></td>
 
 <%} %>
-</table>
+</tr></table>
 </body>
 </html>
 
