@@ -19,7 +19,7 @@
 Registrationbean lb=(Registrationbean)session.getAttribute("bean");
 if(lb!=null){
 %>
-</tr>
+<tr>
 <td><%=lb.getName() %></td>
 <td><%=lb.getEmail() %></td>
 <td><%=lb.getPassword() %></td>
@@ -30,6 +30,6 @@ if(lb!=null){
 <td><a href="update_manager_profile.jsp?id=<%=lb.getId()%>">Update</a></td>
 
 <%} %>
-</table>
+</tr></table>
 </body>
 </html>
