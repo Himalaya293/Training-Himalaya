@@ -11,10 +11,9 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.criterion.Criterion;
 import org.hibernate.criterion.Restrictions;
 
-public class Studentlogic {
+public class Studentlogiclike {
 
 	public static void main(String[] args) {
-		
 		Configuration cf=new Configuration();
 		cf.configure("configuration.xml");
 		SessionFactory sf=cf.buildSessionFactory();
@@ -22,19 +21,18 @@ public class Studentlogic {
         
         Transaction tx=se.beginTransaction();
         Criteria crt=se.createCriteria(Student.class);
-        Criterion cn=Restrictions.gt("marks", 90);
+        Criterion cn=Restrictions.like("id", 124);
         crt.add(cn);
         
         List li=crt.list();
         Iterator i=li.iterator();
         while(i.hasNext()) {
         	Student s=(Student)i.next();
-        	System.out.println(s.getId()+s.getName());
+        	System.out.println(s.getAddress()+" "+s.getName());
         }
         tx.commit();
         se.close();
         sf.close();
-
 	}
 
 }

@@ -11,10 +11,9 @@ import org.hibernate.cfg.Configuration;
 import org.hibernate.criterion.Criterion;
 import org.hibernate.criterion.Restrictions;
 
-public class Studentlogic {
+public class Studentlogicbetween {
 
 	public static void main(String[] args) {
-		
 		Configuration cf=new Configuration();
 		cf.configure("configuration.xml");
 		SessionFactory sf=cf.buildSessionFactory();
@@ -22,7 +21,7 @@ public class Studentlogic {
         
         Transaction tx=se.beginTransaction();
         Criteria crt=se.createCriteria(Student.class);
-        Criterion cn=Restrictions.gt("marks", 90);
+        Criterion cn=Restrictions.between("id", 121, 124);
         crt.add(cn);
         
         List li=crt.list();
@@ -34,7 +33,6 @@ public class Studentlogic {
         tx.commit();
         se.close();
         sf.close();
-
 	}
 
 }
