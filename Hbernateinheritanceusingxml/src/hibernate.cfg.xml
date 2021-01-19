@@ -14,8 +14,7 @@
 <property name="dialet">org.hibernate.dialect.MySQLDialect</property>
 <property name="hbm2ddl.auto">create</property>
 
-
-
+<mapping resource="payment.xml"/>
 
 </session-factory>
 </hibernate-configuration>
