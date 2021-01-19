@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="com.motivity.Payment" table="payment">
+<id name="paymentid" column="pid" ></id>
+<property name="amount" column ="amount"></property>
+
+
+<union-subclass name="com.motivity.Creditcard" >
+<property name="cardtype" column="cctype"></property>
+</union-subclass>
+
+<union-subclass name="com.motivity.Cheque" >
+<property name="chequetype" column="cqtype"></property>
+</union-subclass>
+
+</class>
+
+</hibernate-mapping> 
