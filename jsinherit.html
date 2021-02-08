@@ -1,0 +1,29 @@
+<!Doctype html>
+<html>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        class m1 {
+            constructor(firstname) {
+                this.lastname = firstname;
+            }
+            m2() {
+                return this.lastname;
+            }
+        }
+        class m3 extends m1 {
+            constructor(firstname, add) {
+                super(firstname);
+                this.address = add;
+            }
+            m4() {
+                return this.address;
+            }
+        }
+        let person = new m3("hima", "hyd");
+        document.getElementById("demo").innerHTML = person.m4();
+    </script>
+</body>
+
+</html>
