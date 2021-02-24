@@ -3,12 +3,9 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "helloworld": {
+    "motivity": {
       "projectType": "application",
       "schematics": {
-        "@schematics/angular:component": {
-          "style": "scss"
-        },
         "@schematics/angular:application": {
           "strict": true
         }
@@ -20,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/helloworld",
+            "outputPath": "dist/motivity",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -31,7 +28,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -68,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "helloworld:build"
+            "browserTarget": "motivity:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "helloworld:build:production"
+              "browserTarget": "motivity:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "helloworld:build"
+            "browserTarget": "motivity:build"
           }
         },
         "test": {
@@ -94,7 +91,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.css"
             ],
             "scripts": []
           }
@@ -116,16 +113,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "helloworld:serve"
+            "devServerTarget": "motivity:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "helloworld:serve:production"
+              "devServerTarget": "motivity:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "helloworld"
+  "defaultProject": "motivity"
 }
