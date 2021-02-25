@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <button type="button" onclick="myfunction()">Count</button>
+    <p id="demo">please click on it to increase the value</p>
+    <script>
+        var count = (function() {
+            var counter = 0;
+            return function() {
+                counter += 1;
+                return counter;
+            }
+
+        })();
+
+        function myfunction() {
+            document.getElementById("demo").innerHTML = count();
+        }
+    </script>
+</body>
+
+</html>

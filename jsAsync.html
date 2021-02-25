@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        function myfunction(num) {
+            document.getElementById("demo").innerHTML = num;
+        }
+
+        function factorial(n) {
+            let fact;
+            if (n >= 0) {
+                fact = 1;
+                for (i = 1; i <= n; i++) {
+                    fact *= i;
+                }
+            }
+            myfunction(fact);
+        }
+        factorial(5);
+    </script>
+</body>
+
+</html>
