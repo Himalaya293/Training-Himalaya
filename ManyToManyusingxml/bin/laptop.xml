@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="com.motivity.Laptop" table="laptop">
+<id name="lid" column="lid" ></id>
+<property name="lname" column="lname"></property>
+<property name="lcode" column ="lcode"></property>
+
+<set name="student" cascade="all">
+<key column="sid"/>
+<many-to-many class="com.motivity.Student"/>
+</set>
+</class>
+</hibernate-mapping> 
