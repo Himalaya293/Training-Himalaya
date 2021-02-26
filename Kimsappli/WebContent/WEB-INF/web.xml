@@ -1,0 +1,12 @@
+<web-app>
+  <servlet>
+  <servlet-name>first</servlet-name>
+  <servlet-class>com.kims.DoctorRegistration</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  <servlet-name>first</servlet-name>
+  <url-pattern>/Doctor_regis</url-pattern>
+  </servlet-mapping>
+  
+</web-app>

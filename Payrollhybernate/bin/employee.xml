@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+<class name="com.motivity.Employee" table="employee">
+<id name="id" column="eid"></id>
+<property name="name" column="ename"></property>
+<property name="doj" column ="doj"></property>
+<property name="dob" column ="dob"></property>
+<property name="address" column ="address"></property>
+<property name="deptcode" column ="deptcode"></property>
+<property name="desgcode" column ="desgcode"></property>
+<property name="gradecode" column ="gradecode"></property>
+<property name="salary" column ="salary"></property>
+<property name="pfno" column ="pfno"></property>
+<property name="pfuan" column ="pfuan"></property>
+<property name="casualleave" column ="casualleave"></property>
+<property name="earnedleave" column ="earnedleave"></property>
+<property name="sickleave" column ="sickleave"></property>
+</class>
+</hibernate-mapping> 
