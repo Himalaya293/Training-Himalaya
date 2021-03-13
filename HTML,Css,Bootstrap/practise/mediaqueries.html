@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Media Queries</title>
+    <style>
+        .body {
+            padding: 100px;
+            background-color: #8b008b;
+            text-align: center;
+            color: white;
+        }
+        
+        .navbar {
+            padding: 30px;
+            background-color: #333;
+        }
+        
+        .navbar a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        
+        .navbar a:hover {
+            color: black;
+        }
+        
+        .boximg {
+            background-color: white;
+            width: 100px;
+            padding: 20px;
+        }
+        
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        
+        .column {
+            flex: 30%;
+            padding: 20px;
+            background-color: turquoise;
+        }
+        
+        .main {
+            flex: 70%;
+            background-color: white;
+            padding: 20px;
+        }
+        
+        .footer {
+            padding: 50px;
+            text-align: center;
+            background: #ddd;
+        }
+        
+        @media print {
+            .body {
+                padding: 100px;
+                background-color: #8b008b;
+                text-align: center;
+                color: white;
+            }
+            .navbar {
+                padding: 30px;
+                background-color: #333;
+            }
+            .navbar a {
+                color: white;
+                padding: 14px 20px;
+                text-decoration: none;
+            }
+            .navbar a:hover {
+                color: black;
+            }
+            .boximg {
+                background-color: white;
+                width: 100px;
+                padding: 20px;
+            }
+            .row {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .column {
+                flex: 30%;
+                padding: 20px;
+                background-color: turquoise;
+            }
+            .main {
+                flex: 70%;
+                background-color: white;
+                padding: 20px;
+            }
+        }
+        
+        div1 {
+            background-color: lightgrey;
+            width: 300px;
+            border: 15px solid green;
+            padding: 50px;
+            margin: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="background: pink;padding: 5px;color: white;">
+        <center>
+            <h4>"Hello, World!" program</h4>
+        </center>
+
+    </div>
+
+    <div class="body">
+        <h1>My World</h1>
+        <h5>A Hello World programm generally is a computer program</h5>
+    </div>
+    <div class="navbar">
+        <a href="#">Histroy</a>
+        <a href="#">Variations</a>
+        <a href="#">Time To Hello World</a>
+        <a href="#">See Also</a>
+    </div>
+    <div class="row">
+        <div class="column">
+            <h2>About Me</h2>
+            <h5>One</h5>
+            <div class="boximg" style="height: 500px;width: 500px;"><img src="background(13).jpg" style="width: 500px;height: 500px;"></div>
+            <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
+            <h4>More</h4>
+            <p>"Hello, World!" programs vary in complexity between different languages</p>
+            <div class="boximg" style="height: 100px;width: 500px;"><img src="background(1).jpg" style="width: 500px;height: 100px;"></div><br>
+
+            <div class="boximg" style="height: 100px;width: 500px;"><img src="background(4).jpg" style="width: 500px;height: 100px;"></div><br>
+
+            <div class="boximg" style="height: 100px;width: 500px;"><img src="background(3).jpg" style="width: 500px;height: 100px;"></div><br>
+        </div>
+        <div class="column">
+            <div class="main">
+                <h2>Histroy</h2>
+                <div class="boximg" style="height: 500px;width: 500px;"><img style="width: 500px;height: 500px;background-color: tomato;border-radius: 20px;"></div><br>
+                <div class="boximg" style="height: 500px;width: 500px;">
+                    <img style="width: 500px;height: 500px;background-color:white;border-radius: 10px;" "></div><br>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="footer ">
+
+    </div>
+</body>
+
+</html>

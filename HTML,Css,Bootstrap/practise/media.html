@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<title>Pinnacle Builders</title>
+<style>
+    body {
+        background-image: url('background(12).jpg');
+        height: 500px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    
+    body1 {
+        width: 100%;
+        text-align: center;
+    }
+</style>
+
+<body>
+    <center>
+        <h1 style="color: whitesmoke;">Welcome to Pinnacle Builders</h1>
+    </center>
+    <center>
+        <button onclick="home()">Home</button><br><br><br>
+        <div id="body1">
+            <a href="http://127.0.0.1:5500/mediaflat.html" target="_blank"><span style="color: white;">Flat Details</span></a>
+            <a href="http://127.0.0.1:5500/mediacontact.html" target="_blank"><span style="color:white;">Contact Us</span></a>
+            <a href="http://127.0.0.1:5500/mediaabout.html" target="_blank"><span style="color:white;">Flat Details</span></a>
+        </div>
+        <script>
+            function home() {
+                var x = document.getElementById("body1");
+                if (x.style.display === "none") {
+                    x.style.display = "block";
+                } else {
+                    x.style.display = "none";
+                }
+            }
+        </script>
+        <br><br><br><br>
+        <iframe src="mediahome.html" name="iframe_a" height="300px" width="80%" title="Iframe Example"></iframe>
+        <p>
+            <a href="http://127.0.0.1:5500/mediahome.html" target="_self"></a>
+        </p>
+    </center>
+</body>
+
+</html>

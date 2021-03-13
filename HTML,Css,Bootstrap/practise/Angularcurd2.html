@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>AngularJs CRUD operations demo example</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script>
+        $scope.students = [];
+        var empid = 1;
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function($scope) {
+            $scope.students = [];
+            var empid = 1;
+            $scope.saveRecord = function() {
+                if ($scope.newStudent.id == null) {
+                    $scope.newStudent.id = empid++;
+                    $scope.students.push($scope.newStudent);
+                } else {
+                    for (i in $scope.students) {
+                        if ($scope.students[i].id == $scope.newStudent.id) {
+                            $scope.students[i] = $scope.newStudent;
+                        }
+                    }
+                }
+                $scope.newStudent = {};
+            }
+            $scope.delete = function(id) {
+                for (i in $scope.students) {
+                    if ($scope.students[i].id == id) {
+                        $scope.students.splice(i, 1);
+                        $scope.newStudent = {};
+                    }
+                }
+            }
+            $scope.edit = function(id) {
+                for (i in $scope.students) {
+                    if ($scope.students[i].id == id) {
+                        $scope.newStudent = angular.copy($scope.students[i]);
+                    }
+                }
+            }
+        });
+    </script>
+</head>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <p id="demo"></p>
+    <script>
+        class hmt {
+            constructor(name, year, address) {
+
+                this.name = name;
+                this.address = address;
+                this.year = year;
+            }
+            age() {
+
+                let date = new Date();
+                return date.getFullYear() - this.year;
+            }
+        }
+        let hima = new hmt("jaabi", 1997);
+        document.getElementById("demo").innerHTML = hima.age();
+    </script>
+</head>
+
+</html>

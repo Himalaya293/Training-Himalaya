@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        async function getimg() {
+            let myPromise = new Promise(function(myResolve, myReject) {
+                let req = new XMLHttpRequest();
+                req.open('GET', "jsclosures.html");
+                req.onload = function() {
+                    if (req.status == 200) {
+                        myResolve(req.response);
+                    } else {
+                        myResolve("File not Found");
+                    }
+                };
+                req.send();
+            });
+            document.getElementById("demo").innerHTML = await myPromise;
+        }
+        getimg();
+    </script>
+</body>
+
+</html>

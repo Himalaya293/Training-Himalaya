@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        var hmt = {
+            firstname: "hima",
+            lastname: "laya",
+            address: "Hyd"
+
+        }
+        var x, txt = "";
+        for (x in hmt) {
+            txt = txt + hmt[x] + " ";
+
+        }
+        Object.defineProperty(hmt, "fullname", {
+            get: function() {
+                return this.firstname + " " + this.lastname;
+            }
+        });
+        document.getElementById("demo").innerHTML = hmt.fullname;
+    </script>
+</body>
+
+</html>

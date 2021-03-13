@@ -1,0 +1,42 @@
+console.log('Hello World');
+
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p id="demo"></p>
+    <script>
+        document.getElementById("demo").innerHTML = (5 + 2) * 10;
+    </script>
+    <p id="demo1"></p>
+    <script>
+        var x = 5;
+        var y = 5;
+        var z = x + y;
+        document.getElementById("demo1").innerHTML = "The value of z is: " + z;
+    </script>
+
+    <p id="demo2"></p>
+    <script>
+        var LASTNAME, lastname;
+        lastname = "Hima";
+        LASTNAME = "Laya";
+        document.getElementById("demo2").innerHTML = LASTNAME;
+    </script>
+    <p id="demo3"></p>
+    <script>
+        document.getElementById("demo3").innerHTML = Math.pow(8, 2);
+    </script>
+    <P>if else loop</P>
+    <p id="demo4">if else</p>
+
+    <script>
+        if (new Date().getHours() < 18) {
+            document.getElementById("demo4").innerHTML = "!";
+        } else {
+            document.getElementById("demo4").innerHTML = "Hii";
+        }
+    </script>
+</body>
+
+</html>

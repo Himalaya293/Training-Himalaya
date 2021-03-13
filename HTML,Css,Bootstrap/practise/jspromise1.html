@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p id="demo">please click on it to increase the value</p>
+    <script>
+        function myfunction(n) {
+            document.getElementById("demo").innerHTML = n;
+        }
+
+        let myPromise = new Promise(function(myResolve, myReject) {
+            let sum = 0;
+            const number = prompt('Enter a three-digit positive integer: ');
+
+            let temp = number;
+            while (temp > 0) {
+                let r = temp % 10;
+
+                sum += r * r * r;
+
+                temp = parseInt(temp / 10);
+            }
+            if (sum == number) {
+                myResolve("It is a Amstrong Number");
+            } else {
+                myReject("It is not a Amstrong Number");
+            }
+
+        });
+        myPromise.then(
+            function(value) {
+                myfunction(value);
+            },
+            function(error) {
+                myfunction(error);
+            }
+        );
+    </script>
+</body>
+
+</html>

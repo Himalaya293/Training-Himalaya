@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    <p id="demo">please click on it to increase the value</p>
+    <script>
+        function countp(counter, mycallback) {
+            counter += 1;
+            mycallback(counter);
+            counter++;
+        }
+
+        function myfunction(n) {
+            document.getElementById("demo").innerHTML = n;
+        }
+        countp(1, myfunction);
+    </script>
+</body>
+
+</html>
